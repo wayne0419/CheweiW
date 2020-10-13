@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Io</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="../index.html" class="title">CHEWEI WANG</a>
+				<!-- <nav>
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="Projects.html" class="active">PROJECTS</a></li>
+						<li><a href="DevBlog.html">DEV BLOGS</a></li>
+						<li><a href="AboutMe.html" >ABOUT ME</a></li>
+					</ul>
+				</nav> -->
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper style1 fullscreen fade-up"">
+						<div class="inner">
+							<h1 class="major">Balloon</h1>
+							<span class="image right">
+								<img src="../images/Balloon/balloon_title.png" alt="" />
+								<br>
+								<ul class="actions fit stacked">
+									<li><a href="https://www.youtube.com/watch?v=gZvtUNnDDs8" class="button fit">Gameplay Video</a></li>
+								</ul>
+							</span>
+							
+							<h2>ABOUT</h2>
+							<p>Balloon is a game in which you are a balloon and try to push yourself as high as you can.
+								<br>Won 1st place at University of Michigan Wolverine Soft 2019 48-hours Turkey Game Jam.
+								<br>Developed by 6 University of Michigan students.</p>
+							<h2>DEVELOPMENT INFO</h2>
+							<ul>
+								<li>
+									Developed by Lapforce Interactive.
+								</li>
+								<li>
+									48-hours development cycle (2019 Fall, Umich 49-hours Pumpkin Game Jam)
+								</li>
+								<li>
+									6 developers
+								</li>
+								<li>
+									Made using Unity Engine
+								</li>
+							</ul>
+							<h2>CONTRIBUTIONS</h2>
+							<ul>
+								<li>
+									Programmer, Designer
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section id="main" class="wrapper style2 fullscreen fade-up"">
+						<div class="inner">
+							<h1 class="major">POST-MORTEM</h1>
+							<img src="../images/Balloon/balloon1-crop.gif" class="image right" style="max-width:70%;
+							max-height:100%; margin: 0em 1em 0em 1em;">
+							<h2>WHAT WENT RIGHT</h2>
+							<ul>
+								<li>
+									Efficient team conversation. After we knew the topic of the game jam, 
+									we quickly discussed and decided the game mechanic, complete game loop and art style,
+									and made sure everyone is on the boat.
+								</li>
+								<li>
+									Clean work/takss division. We have three team members worked on environment art(birds, cloud, trap, ...), 
+									one worked on player control/movement, one worked on traps interaction , 
+									and final one work on random procedural level generator. 
+									Basically no overlap or task dependence between team members.
+								</li>
+								<li>
+									Lots of environment art prefabs and trap prefab are easy to reuse, allowing us to made just several 
+									prefabs and reuse, recombine them everywhere to create abundant levels.
+								</li>
+								<li>
+									The above three points made our workflow super efficient, 
+									everyone can work 100% parallel until the final step: combining everything together. 
+									We end up finishing most of the game within 6 hours. For the rest time of the game jam, 
+									we basically just chill, have enough sleep and do some polish here and there.
+								</li>
+
+							</ul>
+							<br><br><br>
+							<img src="../images/Balloon/balloon2-crop.gif" class="image left" style="max-width:60%; 
+							max-height:100%; margin: 0em 3em 1em 1em;">
+							<h2>WHAT COULD BE IMPROVED</h2>
+							<ul>
+								<li>
+									Git has some compatibality issue with Unity, especially when it comes to art work(sprites, animation,...) 
+									and require some tweaking first(ex: .gitignore or else) before convenient usage.
+									However, we forgot to align every team member's tweaking between Git and Unity at the begining, so 
+									the updates in some of the art work were once reverted in the middle of the development or report some weird merge comflict. 
+								</li>
+								<li>
+									More elements(traps, interactives, pcikups, ...) can be added to make the game more thrilling and abundant.
+								</li>
+							</ul>
+
+							
+							<h2>LESSONS LEARNED</h2>
+							<ul>
+								<li>
+									Task/work division must be done with care. Good and clean work/takss division(no overlap or task dependence between team members) 
+									can allow 100% parallel working and fast development speed.
+								</li>
+								<li>
+									In game jam, simple game mechanic and game loop are likely to be completed with decent polish. 
+									So nail down the game mechanic, game loop, and art style quick and communicate them thoroughly to every team member.
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section id="main" class="wrapper style3 fullscreen fade-up"">
+						<div class="inner">
+							<h1 class="major">CONTRIBUTIONS</h1>
+							<p>
+								<span class="image left" ><img src="../images/Balloon/balloon_lg1.png" alt=""></span>
+								My major contribution to this project was the design amd implementaiton of the random procedural level generator. 
+								In this game, there is no boundary or transparent wall that block  players. 
+								Player as a ballon can go toward any direction as far as they want.
+								However, have a really really large world for player to fly around is very resource consuming and also require 
+								lots of effort in level design.
+								<span class="image right"><img src="../images/Balloon/balloon_lg2.png" alt=""></span>
+								<br><br><br><br><br><br><br><br><br>
+								To solve this issue, I designed and implemented a random procedural level generator(level manager). 
+								First, I used block as an unit of the world, and then I made several block prefabs with different environment layout.
+								Then, at the begining of the game, the world starts small with only several blocks surrounding the player. 
+								When the player start flying around, for example, if player flies towawrd left and about to reach the boundary, 
+								the generator will randomly pick a block prefab to expand the world to the left, and also will delete the 
+								blocks that are too far away from the player to avoid resources waste.
+								
+								
+							</p>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; CheWei Wang. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

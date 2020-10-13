@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Io</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="../index.html" class="title">CHEWEI WANG</a>
+				<!-- <nav>
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="Projects.html" class="active">PROJECTS</a></li>
+						<li><a href="DevBlog.html">DEV BLOGS</a></li>
+						<li><a href="AboutMe.html" >ABOUT ME</a></li>
+					</ul>
+				</nav> -->
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper style1 fullscreen fade-up"">
+						<div class="inner">
+							<h1 class="major">Io</h1>
+							<span class="image right"><img src="../images/IO/IO_title.png" alt="" /></span>
+							<h2>ABOUT</h2>
+							<p>Io is a single-player 2D action platformer game featuring challenging combat, difficult platforming and a final boss. 
+								Player has to fight their way down to the bottom of the dark abyss to discover the source of the problem that is plaguing the village.
+								<br>A long term project completed over a semester by around 90 University of Michigan students.</p>
+							<h2>DEVELOPMENT INFO</h2>
+							<ul>
+								<li>
+									Developed by WolverineSoft Studio
+								</li>
+								<li>
+									3 month development cycle (02/04/2020 - 5/04/2020)
+								</li>
+								<li>
+									90 developers
+								</li>
+								<li>
+									Made using Unity Engine
+								</li>
+							</ul>
+							<h2>CONTRIBUTIONS</h2>
+							<ul>
+								<li>
+									Programmer
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section id="main" class="wrapper style2 fullscreen fade-up"">
+						<div class="inner">
+							<h1 class="major">POST-MORTEM</h1>
+							<img src="../images/IO/IO_1.gif" class="image right" style="max-width:60%; 
+							max-height:100%; margin: 0em 1em 0em 1em;">
+							<h2>WHAT WENT RIGHT</h2>
+							<ul>
+								<li>
+									Boss behaviour system created, allowing for designers to design and implement boss behaviours without having to directly
+									code or work extensively alongside programmers.
+								</li>
+								<li>
+									Developer tools creating using ScriptableObjects and Gizmos allowed for designers to design and implement attacks without having to directly
+									code or work extensively alongside programmers
+								</li>
+								<li>
+									Division of boss implementation into State Machine, Attack, and Projectiles allowed for a modular system that allowed fast prototpying and 
+									creation, and the system was stable enough that it is being considered for future WolverineSoft Studio Projects
+								</li>
+								<li>
+									Usage of Confluence Collaboration Software allowed for designers, artists, and audio engineers to easily look up documentation for assets 
+									created by programmers, and prototype using them without the direction of a programmer
+								</li>
+							</ul>
+							<br><br><br>
+							<img src="../images/IO/IO_2.gif" class="image left" style="max-width:60%; 
+							max-height:100%; margin: 0em 3em 1em 1em;">
+							<h2>WHAT COULD BE IMPROVED</h2>
+							<ul>
+								<li>
+									Because progress was far slower than initially anticipated, severe downscoping was required, with only 2 levels left of 
+									the original 6, and 1 boss instead of 2
+								</li>
+								<li>
+									Sprint deadlines were often not meant, with tasks being worked on days after they where due, and many tasks were pushed to 
+									the backlog and future sprints, causing work to pile up
+								</li>
+								<li>
+									Playtesting, while extensive, was not done enough, resulting in game-breaking bugs in implementation being discovered very 
+									late into prodcution, forcing programmers to work overtime to fix them
+								</li>
+							</ul>
+							<br><br><br>
+							<img src="../images/IO/IO_3.png" class="image right" style="max-width:60%; 
+							max-height:100%; margin: 0em 1em 0em 1em;">
+							
+							<h2>LESSONS LEARNED</h2>
+							<ul>
+								<li>
+									Task assignment must be done with far more care, taking into consideration any unexpected circumstances that may cause them to take
+									 far more time, and sprint deadlines must be enforced more strictly to avoid work piling up
+								</li>
+								<li>
+									Extensive playtesting must be done for not only features and design, but also for any custom tools that were created for the projcet
+								</li>
+								<li>
+									While downscoping happens during the development process of almost every game, it should be taken in consideration during preproduction 
+									to prevent very large segments being removed after work has already been done
+								</li>
+						</div>
+					</section>
+					<section id="main" class="wrapper style3 fullscreen fade-up"">
+						<div class="inner">
+							<h1 class="major">CONTRIBUTIONS</h1>
+							<p>
+								<span class="image left" style="max-width: 60%;"><img src="../images/IO/IO_BSM1.png" alt=""></span>
+								My major contribution to this project was the design amd implementaiton of the Boss Behaviour System. 
+								The system not only has a finite state machine that controls the states(attack, idle, hurt,...) of the boss 
+								and allows other developers to add callback functions, but it also has a phase system that
+								allow designers to easily implement bosses' phase transition(ex: normal -> angry -> furious), and 
+								attack abilities patterm through a customized Unity Inspector and Scene Editor without touching code. 
+								The boss system was initially divided into 3 parts, 
+								the Behaviour System, which controlled the behavior of the boss, the BossAttackScriptableObject, which stored the 
+								properties of the attack, such as the animations, and coordinates for the projectiles, and the Projectile prefab, 
+								which was the individual projectiles that would be instantiated by the BossAttackScriptableObject, which was in 
+								turn called on by the Behaviour System.  
+								<span class="image right"><img src="../images/IO/IO_BSM2.png" alt=""></span>
+								<br><br><br><br><br>
+								The design and implementation of the Boss Behaviour System at the early stage of the development
+								only included the finite state machine. However, as the bosses' design progressed, the design team wanted 
+								bosses to have multiple phases(ex: normal -> angry -> furious), and when a boss get hurt to a certain threshold, 
+								it will enter into next phase with a more aggressive, outrageous attack patterm.
+								This means the system was no longer enough to meet design team's need. 
+								After some discussion, I restructure the behaviour system so that the boss behaviour system becomes 
+								a combination of finite state machine and phase editor, allowing designers to easily implement or adjust a boss' behaviour.
+								Also, when implementing boss' attack abilities, there are some attack abilities that are tricky 
+								to be implemented using BossAttackScriptableObject, so later on I adjust the behavior system to 
+								also support attack abilities that are implemented as a function.
+							</p>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; CheWei Wang. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
