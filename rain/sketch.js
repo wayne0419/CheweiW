@@ -41,8 +41,6 @@ function setup() {
   // point_weight_slider.position(370, 20);
   
   Canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-  Canvas.position(0, 0);
-  Canvas.style('z-index', '1');
   pixelDensity(1);
   noSmooth();
   // create buffers
