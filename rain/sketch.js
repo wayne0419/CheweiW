@@ -66,8 +66,8 @@ function draw() {
   // random_color = random_color_slider.value();
   // allow_mouse = allow_mouse_slider.value();
   // strokeWeight(point_weight_slider.value());
-  raindrop_cooldown = 30;
-  number_droplets_per_freq = 5;
+  raindrop_cooldown = 5;
+  number_droplets_per_freq = 3;
   random_color = 0;
   allow_mouse = 1;
   strokeWeight(1);
