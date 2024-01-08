@@ -41,6 +41,7 @@ function setup() {
   // point_weight_slider.position(370, 20);
   
   Canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+  Canvas.id("rain-canvas");
   pixelDensity(1);
   noSmooth();
   // create buffers
