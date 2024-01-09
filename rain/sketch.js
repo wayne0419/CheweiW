@@ -23,7 +23,7 @@ function preload() {
 
 // function windowResized() {
 //   console.log("window is resized");
-//   resizeCanvas(windowWidth, windowHeight);
+//   // resizeCanvas(windowWidth, windowHeight);
 // }
 
 function setup() {
@@ -48,10 +48,12 @@ function setup() {
   currBuff = createGraphics(windowWidth, windowHeight);
   currBuff.pixelDensity(1);
   currBuff.noSmooth();
+  // currBuff.id("rain-currBuff");
   
   prevBuff = createGraphics(windowWidth, windowHeight);
   prevBuff.pixelDensity(1);
   prevBuff.noSmooth();
+  // prevBuff.id("rain-prevBuff");
   
   // set the shader
   shader(rippleShader);
