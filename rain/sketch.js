@@ -75,9 +75,15 @@ function draw() {
 
   // add ripple at mouse
   random_color ? stroke(random(256), random(256), random(256)) : stroke(ripple_color);
-  if(allow_mouse && mouseIsPressed) {
+  if(allow_mouse) {
     point(mouseX - windowWidth/2, mouseY - windowHeight/2);
     // rect(mouseX - width/2, mouseY - height/2, 50, 50);
+  }
+  if(allow_mouse && mouseIsPressed) {
+    stroke(random(256), random(256), random(256))
+    point(mouseX - windowWidth/2, mouseY - windowHeight/2);
+    stroke(ripple_color)
+    // rect(mouseX - windowWidth/2, mouseY - windowHeight/2, 50, 50);
   }
   
   // add rain drop
@@ -99,6 +105,5 @@ function draw() {
   
   // give shader geometry to draw on
   rect(-windowWidth/2, -windowHeight/2, windowWidth, windowHeight);
-
 
 }
